@@ -26,7 +26,7 @@ public class CarroService {
 		
 		List<Carro> listaCarros = repositorio.findByUsuarioId(usuarioId);
 		
-		if(listaCarros.isEmpty())
+		if(listaCarros == null || listaCarros.isEmpty())
 			return null;
 		else
 			return listaCarros;

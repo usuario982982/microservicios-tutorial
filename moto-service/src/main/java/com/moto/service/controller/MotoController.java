@@ -48,7 +48,7 @@ public class MotoController {
 		
 		List<Moto> lista = servicio.getMotosByUsuarioId(usuarioId);
 		
-		if(lista.isEmpty())
+		if(lista == null || lista.isEmpty())
 			return ResponseEntity.noContent().build();
 		else
 			return ResponseEntity.ok(lista);

@@ -49,7 +49,7 @@ public class CarroController {
 		
 		List<Carro> lista = servicio.getCarrosByUsuarioId(usuarioId);
 		
-		if(lista.isEmpty())
+		if(lista == null || lista.isEmpty())
 			return ResponseEntity.noContent().build();
 		else
 			return ResponseEntity.ok(lista);

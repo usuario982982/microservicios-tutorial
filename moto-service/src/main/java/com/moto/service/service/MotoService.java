@@ -28,7 +28,7 @@ public class MotoService {
 		
 		List<Moto> listaMotos = repositorio.findByUsuarioId(usuarioId);
 		
-		if(listaMotos.isEmpty())
+		if(listaMotos == null || listaMotos.isEmpty())
 			return null;
 		else
 			return listaMotos;

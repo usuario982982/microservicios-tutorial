@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.usuario.service.modelos.Moto;
 
-@FeignClient(name = "moto-service",url = "http://localhost:8003")
+//@FeignClient(name = "moto-service",url = "http://localhost:8003")
+@FeignClient(name = "moto-service") //Como ahora se usa el Gateway ya no es necesaria la URL
 @RequestMapping("/moto")
 public interface MotoFeignClient {
 	
